@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReformDidad - Registro de usuario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/sign.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#header").load("templates/header.html");
+            $("#footer").load("templates/footer.html");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+    <h1 class="mt-5">Registro de nuevo usuario</h1>
+    <div id="divFormLog" class="container-fluid mt-4 mb-5">
+        <form id="myForm">
+            <div class="mb-3">
+                <p class="h5">
+                    Introduce los datos que se le solicitan a continuación:
+                </p>
+            </div>
+            <label class="form-label">Nombre de usuario:</label>
+            <div class="mb-3 input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                  </svg></span>
+                <input type="text" class="form-control" id="inputUsuarioSign"
+                    placeholder="Introduce el nombre de usuario" name="user" />
+            </div>
+            <div id="div-user"></div>
+            <label class="form-label">DNI/NIE del usuario:</label>
+            <div class="mb-3 input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">#</span>
+                <input type="text" class="form-control" id="inputUsuarioDNI"
+                    placeholder="Introduce el DNI del usuario" name="dni" />
+            </div>
+            <div id="div-dni"></div>
+            <label class="form-label">Correo electrónico:</label>
+            <div class="mb-3 input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">@</span>
+                <input type="email" class="form-control" id="inputEmailSign"
+                    placeholder="Introduce el correo electrónico" name="email" />
+            </div>
+            <div id="div-email"></div>
+            <label class="form-label">Número de teléfono:</label>
+            <div class="mb-3 input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                  </svg></span>
+                <input type="number" class="form-control" id="inputTelefonoSign"
+                    placeholder="Introduce el número de teléfono" name="telefono" />
+            </div>
+            <div id="div-telefono"></div>
+            <label class="form-label">Contraseña:</label>
+            <div class="mb-3 input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">*</span>
+                <input type="password" class="form-control" id="inputPassSign" placeholder="Introduce la contraseña"
+                    name="pass" />
+            </div>
+            <div id="div-pass"></div>
+            <label class="form-label">Repite contraseña:</label>
+            <div class="mb-3 input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">*</span>
+                <input type="password" class="form-control" id="inputRePassSign"
+                    placeholder="Introduce de nuevo la contraseña" />
+            </div>
+            <div id="div-repass"></div>
+
+            <div class="mb-1" id="btnForm">
+                <button type="submit" class="btn" id="btnRegistro">
+                    Registrarse
+                </button>
+            </div>
+            <div id="div-button" class="text-center"></div>
+        </form>
+    </div>
+    <div id="footer"></div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+</html>

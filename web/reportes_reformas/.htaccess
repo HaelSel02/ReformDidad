@@ -1,0 +1,9 @@
+# Nunca ejecutar código PHP en carpetas de subidas
+<FilesMatch "\.(php|phtml|phar|php[0-9])$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Deny from all
+    </IfModule>
+</FilesMatch>

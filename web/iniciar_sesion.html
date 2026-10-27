@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReformDidad - Iniciar sesión</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/login.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#header").load("templates/header.html");
+        $("#footer").load("templates/footer.html");
+
+        var successRegister = sessionStorage.getItem("successSignin");
+        if (successRegister == "true") {
+          $("<p>Registro realizado correctamente.</p>").appendTo("#successRegister");
+          sessionStorage.removeItem("successSignin");
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <h1 class="mt-5">Inicio de sesión</h1>
+    <div id="successRegister" class="fs-3"></div>
+    <div id="divFormLog" class="container-fluid mb-5 mt-3">
+      <form id="myLog">
+        <label for="exampleInputUser1" class="form-label">Usuario:</label>
+        <div class="mb-3 input-group flex-nowrap">
+          <span class="input-group-text" id="addon-wrapping"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"></path>
+          </svg></span>
+          <input
+            type="text"
+            class="form-control"
+            id="inputUsuarioLog"
+            placeholder="Introduce el usuario..." name="user"
+          />
+        </div>
+        <label for="exampleInputPassword1" class="form-label"
+          >Contraseña:</label
+        >
+        <div class="mb-3 input-group flex-nowrap">
+          <span class="input-group-text" id="addon-wrapping">*</span>
+          <input
+            type="password"
+            class="form-control"
+            id="inputPassLog"
+            placeholder="Introduce la contraseña..." name="pass"
+          />
+        </div>
+
+        <div class="mb-3" id="enlacesForm">
+          <a href="registro_usuario.html">¿Eres nuevo/a? ¡Regístrate!</a>
+        </div>
+        <div class="mb-1" id="btnForm">
+          <button type="submit" class="btn" id="btnAcceder">
+            Iniciar sesión
+          </button>
+        </div>
+        <div id="div-error" class="text-center"></div>
+      </form>
+    </div>
+    <div id="footer"></div>
+  </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>

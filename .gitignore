@@ -1,0 +1,12 @@
+# Secretos y configuración local
+.env
+web/php/includes/config.local.php
+
+# Sistema / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Logs
+*.log

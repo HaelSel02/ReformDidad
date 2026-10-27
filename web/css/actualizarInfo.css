@@ -1,0 +1,36 @@
+#formUsuario{
+    font-size: 18px;
+}
+
+.pEditInfo{
+    margin-top: 1rem;
+}
+
+.error {
+    color: red;
+}
+
+#divPrePass{
+    border-radius: 10px;
+    background-color: rgb(235, 235, 235);
+    box-shadow: 0 0 10px #00000096;
+}
+
+.colorPrincipal{
+    color: #B25C09 !important;
+}
+
+#buttonVista{
+    background-color: white;
+    border: 0px;
+}
+
+#inputPrePass{
+    border-width: 0px;
+}
+
+.botonVerPass, .botonVerPass:hover, .botonVerPass:focus, .botonVerPass:active{
+    border: 1px solid #dee2e6 !important;
+    border-left: 0px !important;
+    background-color: white !important;
+}

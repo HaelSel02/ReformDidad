@@ -1,0 +1,18 @@
+<?php
+include("conexion.php");
+
+$idUsuario = (int)($_GET['id_usuario'] ?? 0);
+
+$query_verificar = "SELECT * FROM `Proyecto_reforma` JOIN Usuarios ON Proyecto_reforma.usuario_solicitante = Usuarios.id_usuario WHERE usuario_solicitante = $idUsuario AND reforma_aprobada = '1' AND finalizado = '0'";
+$resultado = $conexion->query($query_verificar);
+
+$jsonData=array();
+
+while($row = mysqli_fetch_assoc($resultado)){
+ $jsonData[] = quitar_secretos($row);
+}
+
+echo json_encode($jsonData);
+
+$conexion->close();
+?>

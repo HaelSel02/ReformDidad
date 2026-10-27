@@ -1,0 +1,37 @@
+services:
+  db:
+    image: mariadb:10.11
+    environment:
+      MARIADB_DATABASE: reformdidad_db
+      MARIADB_USER: reformdidad
+      MARIADB_PASSWORD: "reformdidad1526*"
+      MARIADB_ROOT_PASSWORD: "joel1526*"
+    volumes:
+      - ./database:/docker-entrypoint-initdb.d:ro   # importa el SQL la primera vez
+      - dbdata:/var/lib/mysql
+
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    environment:
+      DB_HOST: db
+      DB_USER: reformdidad
+      DB_PASS: "reformdidad1526*"
+      DB_NAME: reformdidad_db
+      MAIL_ENABLED: "0"
+    depends_on:
+      - db
+
+  phpmyadmin:
+    image: phpmyadmin
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+      UPLOAD_LIMIT: 300M
+    depends_on:
+      - db
+
+volumes:
+  dbdata:

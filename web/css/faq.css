@@ -1,0 +1,23 @@
+a.linkPregunta {
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 500;
+    display: contents;
+}
+
+p.pregunta{
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+#divPrincipal{
+    padding: 40px;
+}
+.divWrapRespuestas{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}

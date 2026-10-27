@@ -1,0 +1,50 @@
+body{
+    font-size: 18px;
+}
+
+#divPrincipal{
+    padding: 40px;
+}
+
+#myForm{
+    background-color: rgb(235, 235, 235);
+    border-radius: 20px;
+    box-shadow: 0 0 10px #00000061;
+}
+
+#contacta{
+    font-size: 68px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+.resaltado{
+    color: #B25C09 !important;
+}
+
+.errorP{
+    margin-top: 10px;
+    color: red;
+}
+
+.noerrorP{
+    display: none;
+}
+
+input{
+    border-radius: 5px !important;
+}
+
+textarea{
+    width: 100% !important;
+    border-radius: 5px !important;
+}
+
+/* Para navegadores WebKit */
+#inputTelefonoContacto::-webkit-inner-spin-button,
+#inputTelefonoContacto::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

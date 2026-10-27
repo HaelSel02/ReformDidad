@@ -1,0 +1,53 @@
+#navbar{
+    background-color: #FFEEDE !important;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #B25C09 !important;
+}
+
+a:hover{
+    color: #944b06 !important;
+}
+
+#titLogo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+}
+
+#menu{
+    float: right;
+    border: 1px solid black;
+    display: flex;
+}
+
+
+ul.menu li{
+    font-size: 24px;
+}
+
+#imgLogo {
+    width: 75px;
+}
+
+.sticky-top-1{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+}
+
+.noDisplay{
+    display: none;
+}
