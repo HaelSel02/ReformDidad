@@ -2,7 +2,7 @@
 
 Aplicación web para una empresa de reformas de viviendas en Valencia. Proyecto final del ciclo de Desarrollo de Aplicaciones Web (DAW, 2024), revisado después para mejorar su seguridad y poder publicarlo como demo.
 
-> **Demo:** _(https://joelgallo.com/reformdidad/)_
+> **Demo:** _(https://reformdidad.joelgallo.com/)_
 
 ## Qué hace
 
