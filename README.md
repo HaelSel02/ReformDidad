@@ -1,6 +1,6 @@
 # ReformDidad
 
-Aplicación web para una empresa de reformas de viviendas en Valencia. Proyecto final del ciclo de Desarrollo de Aplicaciones Multiplataforma (DAW, 2024), revisado después para mejorar su seguridad y poder publicarlo como demo.
+Aplicación web para una empresa de reformas de viviendas en Valencia. Proyecto final del ciclo de Desarrollo de Aplicaciones Web (DAW, 2024), revisado después para mejorar su seguridad y poder publicarlo como demo.
 
 > **Demo:** _(https://joelgallo.com/reformdidad/)_
 
